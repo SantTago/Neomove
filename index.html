@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
   <head>
@@ -49,12 +48,24 @@
         background-color: #0a0a0a;
         min-height: 100vh;
       }
+      /* Garantir que o texto de carregamento ou erro seja visível contra o fundo preto */
+      .fallback-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-size: 10px;
+      }
       .neon-glow { box-shadow: 0 0 15px rgba(46, 179, 255, 0.4); }
       .neon-text { text-shadow: 0 0 8px rgba(46, 179, 255, 0.6); }
       .italic-speed { font-style: italic; letter-spacing: -0.02em; }
     </style>
 
-    <!-- Polyfill para Módulos ES em navegadores que precisam -->
+    <!-- Polyfill para Módulos ES -->
     <script async src="https://ga.jspm.io/npm:es-module-shims@1.10.1/dist/es-module-shims.js"></script>
 
     <script type="importmap">
@@ -71,8 +82,21 @@
 </script>
   </head>
   <body>
-    <div id="root"></div>
-    <!-- Script principal como módulo -->
+    <div id="root">
+      <div class="fallback-content">
+        Iniciando Neomove...
+      </div>
+    </div>
+    
+    <script type="module">
+      // Script de diagnóstico para o console
+      console.log("Iniciando carregamento de módulos...");
+      window.addEventListener('error', function(e) {
+        console.error("Erro detectado no carregamento:", e.message, "em", e.filename);
+        document.getElementById('root').innerHTML = '<div style="color:red; padding: 20px; text-align: center;">Erro crítico: ' + e.message + '</div>';
+      }, true);
+    </script>
+
     <script type="module" src="./index.tsx"></script>
   </body>
 </html>
