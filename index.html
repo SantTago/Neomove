@@ -5,27 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neomove | Fisioterapia & Performance</title>
     
-    <!-- Configurações de Cor do Sistema (Essencial para o fundo da caixinha) -->
-    <meta name="theme-color" content="#0a0a0a">
+    <!-- Força o modo escuro no navegador e em sistemas de busca -->
     <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="msapplication-TileColor" content="#0a0a0a">
 
-    <!-- Meta Tags para Redes Sociais (Open Graph) -->
+    <!-- SEO / Descrição -->
     <meta name="description" content="Movimento sem dor. Performance com confiança. Neomove: especialistas em biomecânica e reabilitação esportiva de elite.">
+    
+    <!-- Open Graph / Facebook / WhatsApp (A "caixinha") -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://neomove.com.br/">
     <meta property="og:title" content="Neomove | Fisioterapia & Performance">
     <meta property="og:description" content="Especialistas em biomecânica de elite. Agende sua avaliação agora.">
     <meta property="og:image" content="https://i.ibb.co/W40Yjwdc/Sem-t-tulo-1.png">
+    <meta property="og:image:secure_url" content="https://i.ibb.co/W40Yjwdc/Sem-t-tulo-1.png">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:background_color" content="#0a0a0a">
+    <meta property="og:image:alt" content="Neomove Logo em fundo preto">
+    <meta property="og:site_name" content="Neomove">
+    <meta property="og:locale" content="pt_BR">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Neomove | Fisioterapia & Performance">
-    <meta name="twitter:description" content="Especialistas em biomecânica de elite.">
+    <meta name="twitter:description" content="Especialistas em biomecânica de elite em Fortaleza.">
     <meta name="twitter:image" content="https://i.ibb.co/W40Yjwdc/Sem-t-tulo-1.png">
 
     <!-- Favicon -->
@@ -45,8 +52,12 @@
             --dark: #0a0a0a;
         }
 
-        /* Força fundo preto antes mesmo do carregamento total */
-        html, body {
+        /* Previne qualquer flash de cor clara durante o carregamento */
+        html {
+            background-color: #0a0a0a;
+        }
+
+        body {
             background-color: #0a0a0a !important;
             color: #ffffff;
             font-family: 'Montserrat', sans-serif;
@@ -78,7 +89,6 @@
             padding-bottom: 0.75rem;
         }
 
-        /* Melhoria de legibilidade no mobile */
         @media (max-width: 768px) {
             h1 { font-size: 2.75rem !important; line-height: 1.1 !important; }
         }
@@ -86,9 +96,9 @@
 <script type="importmap">
 {
   "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
     "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4"
+    "react/": "https://esm.sh/react@^19.2.4/"
   }
 }
 </script>
@@ -102,7 +112,6 @@
                 <img src="https://i.ibb.co/W40Yjwdc/Sem-t-tulo-1.png" alt="Neomove Logo" class="h-10 w-auto">
             </a>
 
-            <!-- Desktop Menu -->
             <div class="hidden md:flex items-center gap-8">
                 <a href="#sobre" class="text-[10px] font-bold uppercase tracking-widest hover:text-[#2eb3ff] transition-colors">Sobre</a>
                 <a href="#servicos" class="text-[10px] font-bold uppercase tracking-widest hover:text-[#2eb3ff] transition-colors">Serviços</a>
@@ -112,7 +121,6 @@
                 </a>
             </div>
 
-            <!-- Mobile Toggle -->
             <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
                 <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
