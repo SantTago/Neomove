@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neomove | Fisioterapia & Performance</title>
     
-    <!-- Força o modo escuro no navegador e em sistemas de busca -->
+    <!-- Configurações de Cor do Sistema -->
     <meta name="color-scheme" content="dark">
     <meta name="theme-color" content="#0a0a0a">
     <meta name="mobile-web-app-capable" content="yes">
@@ -13,27 +13,26 @@
     <meta name="msapplication-TileColor" content="#0a0a0a">
 
     <!-- SEO / Descrição -->
-    <meta name="description" content="Movimento sem dor. Performance com confiança. Neomove: especialistas em biomecânica e reabilitação esportiva de elite.">
+    <meta name="description" content="Movimento sem dor. Performance com confiança. Neomove: especialistas em biomecânica e reabilitação esportiva de elite em Fortaleza.">
     
-    <!-- Open Graph / Facebook / WhatsApp (A "caixinha") -->
+    <!-- Open Graph / Facebook / WhatsApp (Logo com fundo preto para o link) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://neomove.com.br/">
     <meta property="og:title" content="Neomove | Fisioterapia & Performance">
     <meta property="og:description" content="Especialistas em biomecânica de elite. Agende sua avaliação agora.">
-    <!-- IMAGEM DE COMPARTILHAMENTO ATUALIZADA -->
     <meta property="og:image" content="https://i.ibb.co/vC6SF4Yv/Sem-t-tulo-1.png">
     <meta property="og:image:secure_url" content="https://i.ibb.co/vC6SF4Yv/Sem-t-tulo-1.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Neomove Logo - Performance & Saúde">
+    <meta property="og:image:alt" content="Neomove Logo SEO">
     <meta property="og:site_name" content="Neomove">
     <meta property="og:locale" content="pt_BR">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Neomove | Fisioterapia & Performance">
-    <meta name="twitter:description" content="Especialistas em biomecânica de elite em Fortaleza.">
+    <meta name="twitter:description" content="Elite Performance Clinic em Fortaleza.">
     <meta name="twitter:image" content="https://i.ibb.co/vC6SF4Yv/Sem-t-tulo-1.png">
 
     <!-- Favicon -->
@@ -53,10 +52,7 @@
             --dark: #0a0a0a;
         }
 
-        /* Previne qualquer flash de cor clara durante o carregamento */
-        html {
-            background-color: #0a0a0a;
-        }
+        html { background-color: #0a0a0a; }
 
         body {
             background-color: #0a0a0a !important;
@@ -90,6 +86,14 @@
             padding-bottom: 0.75rem;
         }
 
+        .service-card img, .gallery-img img {
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card:hover img, .gallery-img:hover img {
+            transform: scale(1.1);
+        }
+
         @media (max-width: 768px) {
             h1 { font-size: 2.75rem !important; line-height: 1.1 !important; }
         }
@@ -110,13 +114,14 @@
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-6">
         <div class="container mx-auto px-6 flex items-center justify-between">
             <a href="#" class="flex items-center">
+                <!-- LOGO ORIGINAL NO SITE -->
                 <img src="https://i.ibb.co/W40Yjwdc/Sem-t-tulo-1.png" alt="Neomove Logo" class="h-10 w-auto">
             </a>
 
             <div class="hidden md:flex items-center gap-8">
                 <a href="#sobre" class="text-[10px] font-bold uppercase tracking-widest hover:text-[#2eb3ff] transition-colors">Sobre</a>
                 <a href="#servicos" class="text-[10px] font-bold uppercase tracking-widest hover:text-[#2eb3ff] transition-colors">Serviços</a>
-                <a href="#diferenciais" class="text-[10px] font-bold uppercase tracking-widest hover:text-[#2eb3ff] transition-colors">Diferenciais</a>
+                <a href="#unidade" class="text-[10px] font-bold uppercase tracking-widest hover:text-[#2eb3ff] transition-colors">Unidade</a>
                 <a href="https://wa.me/5585991239931" target="_blank" class="bg-[#2eb3ff] text-[#0a0a0a] px-6 py-2 rounded-full font-bold uppercase text-[10px] tracking-widest hover:bg-white transition-all neon-glow">
                     Agendar
                 </a>
@@ -132,13 +137,13 @@
 
     <!-- MOBILE MENU -->
     <div id="mobile-menu" class="fixed inset-0 bg-[#0a0a0a] z-[45] hidden flex-col justify-center items-center gap-8 p-10">
-        <a href="#sobre" class="text-3xl font-black uppercase italic-speed menu-link">Sobre</a>
-        <a href="#servicos" class="text-3xl font-black uppercase italic-speed menu-link">Serviços</a>
-        <a href="#diferenciais" class="text-3xl font-black uppercase italic-speed menu-link">Diferenciais</a>
+        <a href="#sobre" class="text-3xl font-black uppercase italic-speed menu-link text-white">Sobre</a>
+        <a href="#servicos" class="text-3xl font-black uppercase italic-speed menu-link text-white">Serviços</a>
+        <a href="#unidade" class="text-3xl font-black uppercase italic-speed menu-link text-white">Unidade</a>
         <a href="https://wa.me/5585991239931" target="_blank" class="bg-[#2eb3ff] text-[#0a0a0a] w-full py-4 rounded-xl text-center font-black uppercase text-sm">Agendar Agora</a>
     </div>
 
-    <!-- HERO -->
+    <!-- HERO (IMAGEM 9) -->
     <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="https://i.ibb.co/8nb5HX4T/2025-12-09-9.webp" alt="Performance Neomove" class="w-full h-full object-cover grayscale brightness-[0.3]">
@@ -150,7 +155,7 @@
                 <div class="inline-block bg-[#2eb3ff]/20 border border-[#2eb3ff]/30 px-4 py-1 rounded-full mb-6">
                     <span class="text-[#2eb3ff] text-[9px] font-bold uppercase tracking-[0.3em]">Elite Performance Clinic</span>
                 </div>
-                <h1 class="text-5xl md:text-8xl font-black mb-6 italic-speed leading-none uppercase">
+                <h1 class="text-5xl md:text-8xl font-black mb-6 italic-speed leading-none uppercase text-white">
                     MOVIMENTO <br>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-[#2eb3ff] neon-text">SEM LIMITES.</span>
                 </h1>
@@ -167,7 +172,7 @@
         </div>
     </section>
 
-    <!-- SOBRE -->
+    <!-- SOBRE (IMAGEM 4) -->
     <section id="sobre" class="py-24 md:py-32 bg-[#0a0a0a] scroll-mt-20">
         <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
             <div class="reveal">
@@ -175,65 +180,109 @@
             </div>
             <div class="reveal">
                 <span class="text-[#2eb3ff] font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">A Metodologia</span>
-                <h2 class="text-4xl md:text-6xl font-black mb-8 italic-speed uppercase leading-tight">Saúde como prioridade, <br><span class="text-neutral-600">resultado como meta.</span></h2>
-                <p class="text-neutral-400 text-lg leading-relaxed mb-8">A Neomove combina protocolos de elite internacional com tecnologia de ponta para garantir que seu corpo performe no máximo potencial, livre de dores.</p>
-                <div class="grid gap-6 text-left">
-                    <div class="flex gap-4">
-                        <div class="bg-white/5 p-3 rounded-xl h-fit text-[#2eb3ff]">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white uppercase italic-speed text-sm">Avaliação Biomecânica</h4>
-                            <p class="text-neutral-500 text-xs">Análise milimétrica de cada movimento.</p>
-                        </div>
+                <h2 class="text-4xl md:text-6xl font-black mb-8 italic-speed uppercase leading-tight text-white">Saúde como prioridade, <br><span class="text-neutral-600">resultado como meta.</span></h2>
+                <p class="text-neutral-400 text-lg leading-relaxed mb-8">A Neomove combina protocolos de elite internacional com tecnologia de ponta para garantir que seu corpo performe no máximo potencial.</p>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/5">
+                        <h4 class="text-[#2eb3ff] font-black italic-speed uppercase text-lg mb-2">+10</h4>
+                        <p class="text-neutral-500 text-[10px] font-bold uppercase tracking-widest leading-tight">Anos de <br>Experiência</p>
                     </div>
-                    <div class="flex gap-4">
-                        <div class="bg-white/5 p-3 rounded-xl h-fit text-[#2eb3ff]">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white uppercase italic-speed text-sm">Performance Máxima</h4>
-                            <p class="text-neutral-500 text-xs">Elevamos seu nível físico com base científica.</p>
-                        </div>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/5">
+                        <h4 class="text-[#2eb3ff] font-black italic-speed uppercase text-lg mb-2">Elite</h4>
+                        <p class="text-neutral-500 text-[10px] font-bold uppercase tracking-widest leading-tight">Protocolos <br>Internacionais</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVIÇOS -->
+    <!-- SERVIÇOS (IMAGENS 8, 7, 6) -->
     <section id="servicos" class="py-24 bg-neutral-900/30">
         <div class="container mx-auto px-6">
             <div class="text-center mb-20 reveal">
                 <h2 class="text-4xl md:text-6xl font-black italic-speed uppercase text-white">Nossos <span class="text-neutral-600">Serviços</span></h2>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="reveal bg-neutral-900 border border-white/5 p-8 rounded-3xl hover:border-[#2eb3ff]/40 transition-all group">
-                    <div class="w-14 h-14 bg-[#2eb3ff] rounded-2xl flex items-center justify-center mb-8 neon-glow">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                <!-- Card 1 (IMAGEM 8) -->
+                <div class="reveal service-card bg-neutral-900 border border-white/5 rounded-3xl overflow-hidden hover:border-[#2eb3ff]/40 transition-all group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://i.ibb.co/zV0xcyY0/2025-12-09-8.webp" alt="Fisioterapia Esportiva" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent"></div>
                     </div>
-                    <h3 class="text-xl font-black uppercase italic-speed mb-4 text-white">Fisioterapia Esportiva</h3>
-                    <p class="text-neutral-400 text-xs leading-relaxed mb-6">Reabilitação acelerada com foco em retorno seguro ao esporte de alto nível.</p>
-                    <a href="https://wa.me/5585991239931" target="_blank" class="text-[#2eb3ff] text-[10px] font-bold uppercase tracking-widest border-b border-[#2eb3ff]/20 pb-1">Saiba Mais</a>
+                    <div class="p-8">
+                        <h3 class="text-xl font-black uppercase italic-speed mb-2 text-white">Fisioterapia Esportiva</h3>
+                        <p class="text-neutral-400 text-xs leading-relaxed">Reabilitação acelerada com foco em retorno seguro ao esporte de alto nível.</p>
+                    </div>
                 </div>
-                <!-- Card 2 -->
-                <div class="reveal bg-neutral-900 border border-white/5 p-8 rounded-3xl hover:border-[#2eb3ff]/40 transition-all group" style="transition-delay: 0.1s">
-                    <div class="w-14 h-14 bg-[#2eb3ff] rounded-2xl flex items-center justify-center mb-8 neon-glow">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z" /></svg>
+                <!-- Card 2 (IMAGEM 7) -->
+                <div class="reveal service-card bg-neutral-900 border border-white/5 rounded-3xl overflow-hidden hover:border-[#2eb3ff]/40 transition-all group" style="transition-delay: 0.1s">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://i.ibb.co/wZVmh2tN/2025-12-09-7.webp" alt="Recovery & Estética" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent"></div>
                     </div>
-                    <h3 class="text-xl font-black uppercase italic-speed mb-4 text-white">Recovery & Relax</h3>
-                    <p class="text-neutral-400 text-xs leading-relaxed mb-6">Otimização da recuperação muscular através de tecnologia e massoterapia.</p>
-                    <a href="https://wa.me/5585991239931" target="_blank" class="text-[#2eb3ff] text-[10px] font-bold uppercase tracking-widest border-b border-[#2eb3ff]/20 pb-1">Saiba Mais</a>
+                    <div class="p-8">
+                        <h3 class="text-xl font-black uppercase italic-speed mb-2 text-white">Recovery & Relax</h3>
+                        <p class="text-neutral-400 text-xs leading-relaxed">Otimização da recuperação muscular através de tecnologia e massoterapia.</p>
+                    </div>
                 </div>
-                <!-- Card 3 -->
-                <div class="reveal bg-neutral-900 border border-white/5 p-8 rounded-3xl hover:border-[#2eb3ff]/40 transition-all group" style="transition-delay: 0.2s">
-                    <div class="w-14 h-14 bg-[#2eb3ff] rounded-2xl flex items-center justify-center mb-8 neon-glow">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                <!-- Card 3 (IMAGEM 6) -->
+                <div class="reveal service-card bg-neutral-900 border border-white/5 rounded-3xl overflow-hidden hover:border-[#2eb3ff]/40 transition-all group" style="transition-delay: 0.2s">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://i.ibb.co/n8Vd4R8s/2025-12-09-6.webp" alt="Treinamento Terapêutico" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent"></div>
                     </div>
-                    <h3 class="text-xl font-black uppercase italic-speed mb-4 text-white">Personal Terapêutico</h3>
-                    <p class="text-neutral-400 text-xs leading-relaxed mb-6">Treinamento personalizado guiado por fisioterapeutas especialistas.</p>
-                    <a href="https://wa.me/5585991239931" target="_blank" class="text-[#2eb3ff] text-[10px] font-bold uppercase tracking-widest border-b border-[#2eb3ff]/20 pb-1">Saiba Mais</a>
+                    <div class="p-8">
+                        <h3 class="text-xl font-black uppercase italic-speed mb-2 text-white">Personal Terapêutico</h3>
+                        <p class="text-neutral-400 text-xs leading-relaxed">Treinamento personalizado guiado por fisioterapeutas especialistas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFERENCIAIS (IMAGEM 2) -->
+    <section id="diferenciais" class="py-24 bg-[#0a0a0a]">
+        <div class="container mx-auto px-6">
+            <div class="bg-neutral-900/50 border border-white/5 rounded-[3rem] p-12 md:p-20 grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="text-4xl md:text-6xl font-black italic-speed uppercase text-white mb-8">Tecnologia <span class="text-[#2eb3ff]">de Ponta.</span></h2>
+                    <p class="text-neutral-400 text-lg mb-10">Nossa infraestrutura foi projetada para oferecer o que há de mais moderno em equipamentos de reabilitação e análise de performance.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-white border-l-2 border-[#2eb3ff] pl-4">Análise Cinética 3D</div>
+                        <div class="flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-white border-l-2 border-[#2eb3ff] pl-4">Aparelhos de Crioterapia</div>
+                        <div class="flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-white border-l-2 border-[#2eb3ff] pl-4">Laser de Alta Potência</div>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <img src="https://i.ibb.co/LXXk7pcj/2025-12-09-2.webp" alt="Infraestrutura Neomove" class="rounded-3xl grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOSSA UNIDADE - GALERIA COMPLETA (IMAGENS 5, 3, 09, 1, 1-alt) -->
+    <section id="unidade" class="py-24 bg-[#0a0a0a] border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="mb-16 reveal">
+                <span class="text-[#2eb3ff] font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Nossa Unidade</span>
+                <h2 class="text-4xl md:text-6xl font-black italic-speed uppercase text-white">Ambiente <span class="text-neutral-600">Exclusivo</span></h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:h-[600px]">
+                <div class="md:col-span-2 gallery-img relative overflow-hidden rounded-2xl group reveal">
+                    <img src="https://i.ibb.co/0j2k3NZg/2025-12-09-5.webp" alt="Sala de Atendimento" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
+                </div>
+                <div class="gallery-img relative overflow-hidden rounded-2xl group reveal" style="transition-delay: 0.1s">
+                    <img src="https://i.ibb.co/GmMvZ0k/2025-12-09-3.webp" alt="Consultório" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
+                </div>
+                <div class="gallery-img relative overflow-hidden rounded-2xl group reveal" style="transition-delay: 0.2s">
+                    <img src="https://i.ibb.co/Kxzc48wL/2025-12-09.webp" alt="Equipamentos" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
+                </div>
+                <div class="gallery-img relative overflow-hidden rounded-2xl group reveal" style="transition-delay: 0.3s">
+                    <img src="https://i.ibb.co/1fPVz4yS/1.webp" alt="Área de Treino" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
+                </div>
+                <div class="md:col-span-3 gallery-img relative overflow-hidden rounded-2xl group reveal" style="transition-delay: 0.4s">
+                    <img src="https://i.ibb.co/gLW2wskk/2025-12-09-1.webp" alt="Visão Geral" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
                 </div>
             </div>
         </div>
@@ -245,15 +294,15 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
                 <div>
                     <img src="https://i.ibb.co/W40Yjwdc/Sem-t-tulo-1.png" alt="Logo Neomove" class="h-10 mb-6">
-                    <p class="text-neutral-500 text-xs uppercase tracking-wider">A excelência em fisioterapia e performance esportiva em Fortaleza.</p>
+                    <p class="text-neutral-500 text-xs uppercase tracking-wider leading-relaxed">A excelência em fisioterapia e performance esportiva em Fortaleza. Shopping Iguatemi Bosque.</p>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold uppercase tracking-widest text-[10px] mb-6">Contato</h4>
-                    <p class="text-neutral-500 text-sm mb-2">(85) 99123-9931</p>
-                    <p class="text-neutral-500 text-sm">Shopping Iguatemi Bosque, Fortaleza-CE</p>
+                    <h4 class="text-white font-bold uppercase tracking-widest text-[10px] mb-6">Localização</h4>
+                    <p class="text-neutral-500 text-sm mb-2 font-medium">Shopping Iguatemi Bosque, Piso L6</p>
+                    <p class="text-neutral-500 text-sm font-medium">Av. Washington Soares, 85 - Fortaleza-CE</p>
                 </div>
                 <div>
-                    <a href="https://wa.me/5585991239931" target="_blank" class="block bg-[#2eb3ff] text-black text-center py-4 rounded-xl font-black uppercase text-xs tracking-widest hover:bg-white transition-all">
+                    <a href="https://wa.me/5585991239931" target="_blank" class="block bg-[#2eb3ff] text-black text-center py-4 rounded-xl font-black uppercase text-xs tracking-widest hover:bg-white transition-all shadow-lg neon-glow">
                         Agendar via WhatsApp
                     </a>
                 </div>
