@@ -6,34 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Neomove | Fisioterapia & Performance</title>
     
-    <!-- Cor da Interface do Sistema e Metadados de Cor -->
+    <!-- Configurações de Cor do Sistema -->
     <meta name="theme-color" content="#0a0a0a">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="msapplication-TileColor" content="#0a0a0a">
     <meta name="color-scheme" content="dark">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <!-- SEO & Previews -->
-    <meta name="description" content="Movimento sem dor. Performance com confiança. Neomove: especialistas em biomecânica e reabilitação esportiva de elite em Fortaleza." />
-    <meta name="keywords" content="fisioterapia, performance, esportiva, reabilitação, biomecânica, neomove, fortaleza" />
+    <meta name="description" content="Movimento sem dor. Performance com confiança. Neomove: especialistas em biomecânica e reabilitação esportiva de elite." />
     
-    <!-- Open Graph / Facebook / WhatsApp / Telegram -->
+    <!-- Open Graph (WhatsApp/Instagram) com fundo preto garantido -->
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Neomove" />
     <meta property="og:title" content="Neomove | Fisioterapia & Performance" />
-    <meta property="og:description" content="Movimento sem dor. Performance com confiança. Especialistas em biomecânica e reabilitação esportiva de elite." />
-    <!-- Imagem de visualização do link -->
+    <meta property="og:description" content="Especialistas em biomecânica e reabilitação esportiva de elite." />
     <meta property="og:image" content="https://i.ibb.co/W40Yjwdc/Sem-t-tulo-1.png" />
-    <meta property="og:image:secure_url" content="https://i.ibb.co/W40Yjwdc/Sem-t-tulo-1.png" />
-    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://neomove.com.br" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Neomove | Fisioterapia & Performance" />
-    <meta name="twitter:description" content="Especialistas em biomecânica e reabilitação esportiva de elite." />
-    <meta name="twitter:image" content="https://i.ibb.co/W40Yjwdc/Sem-t-tulo-1.png" />
+    <meta property="og:background_color" content="#0a0a0a" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://i.ibb.co/W40Yjwdc/Sem-t-tulo-1.png">
@@ -49,33 +37,24 @@
         --primary-blue: #2eb3ff;
         --dark-bg: #0a0a0a;
       }
-      /* Fundo preto imediato para evitar qualquer clarão branco */
       html, body {
         background-color: #0a0a0a !important;
         color: #ffffff;
         margin: 0;
         padding: 0;
-        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
-        -webkit-font-smoothing: antialiased;
+        font-family: 'Montserrat', sans-serif;
         overflow-x: hidden;
       }
       #root {
-        min-height: 100vh;
         background-color: #0a0a0a;
+        min-height: 100vh;
       }
-      .neon-glow {
-        box-shadow: 0 0 15px rgba(46, 179, 255, 0.4);
-      }
-      .neon-text {
-        text-shadow: 0 0 8px rgba(46, 179, 255, 0.6);
-      }
-      .italic-speed {
-        font-style: italic;
-        letter-spacing: -0.02em;
-      }
+      .neon-glow { box-shadow: 0 0 15px rgba(46, 179, 255, 0.4); }
+      .neon-text { text-shadow: 0 0 8px rgba(46, 179, 255, 0.6); }
+      .italic-speed { font-style: italic; letter-spacing: -0.02em; }
     </style>
 
-    <!-- Polyfill para Import Maps -->
+    <!-- Polyfill para Módulos ES em navegadores que precisam -->
     <script async src="https://ga.jspm.io/npm:es-module-shims@1.10.1/dist/es-module-shims.js"></script>
 
     <script type="importmap">
@@ -92,9 +71,8 @@
 </script>
   </head>
   <body>
-    <!-- Removido o loader manual para que o React assuma o controle instantaneamente -->
     <div id="root"></div>
-
+    <!-- Script principal como módulo -->
     <script type="module" src="./index.tsx"></script>
   </body>
 </html>

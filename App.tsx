@@ -9,7 +9,7 @@ import { Footer } from './components/Footer.tsx';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-[#2eb3ff] selection:text-[#0a0a0a]">
+    <div className="min-h-screen bg-[#0a0a0a] text-white">
       <Navbar />
       <main>
         <Hero />
