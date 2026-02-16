@@ -6,17 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Neomove | Fisioterapia & Performance</title>
     
+    <!-- Cor da Interface do Sistema -->
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-TileColor" content="#0a0a0a">
+    <meta name="color-scheme" content="dark">
+
     <!-- SEO & Previews -->
     <meta name="description" content="Movimento sem dor. Performance com confiança. Neomove: especialistas em biomecânica e reabilitação esportiva de elite em Fortaleza." />
     <meta name="keywords" content="fisioterapia, performance, esportiva, reabilitação, biomecânica, neomove, fortaleza" />
     
-    <!-- Open Graph / Facebook / WhatsApp -->
+    <!-- Open Graph / Facebook / WhatsApp / Telegram -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Neomove" />
     <meta property="og:title" content="Neomove | Fisioterapia & Performance" />
     <meta property="og:description" content="Movimento sem dor. Performance com confiança. Especialistas em biomecânica e reabilitação esportiva de elite." />
     <meta property="og:image" content="https://i.ibb.co/W40Yjwdc/Sem-t-tulo-1.png" />
+    <meta property="og:image:secure_url" content="https://i.ibb.co/W40Yjwdc/Sem-t-tulo-1.png" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://neomove.com.br" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -27,6 +37,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://i.ibb.co/W40Yjwdc/Sem-t-tulo-1.png">
 
+    <!-- Tailwind & Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,11 +48,18 @@
         --primary-blue: #2eb3ff;
         --dark-bg: #0a0a0a;
       }
-      body {
-        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
-        background-color: var(--dark-bg);
+      /* Fundo preto forçado desde o milissegundo zero */
+      html, body {
+        background-color: var(--dark-bg) !important;
         color: #ffffff;
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
         -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      #root {
+        min-height: 100vh;
       }
       .neon-glow {
         box-shadow: 0 0 15px rgba(46, 179, 255, 0.4);
@@ -53,10 +71,10 @@
         font-style: italic;
         letter-spacing: -0.02em;
       }
-      /* Ensure interactive elements have min touch target size */
       a, button {
-        min-height: 44px;
-        min-width: 44px;
+        min-height: 48px;
+        min-width: 48px;
+        cursor: pointer;
       }
       ::-webkit-scrollbar {
         width: 8px;
@@ -71,19 +89,43 @@
       ::-webkit-scrollbar-thumb:hover {
         background: var(--primary-blue);
       }
-    </style>
-    <script type="importmap">
-    {
-      "imports": {
-        "react/": "https://esm.sh/react@^19.2.4/",
-        "react": "https://esm.sh/react@^19.2.4",
-        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-        "lucide-react": "https://esm.sh/lucide-react@^0.564.0"
+      @keyframes pulse {
+        0%, 100% { opacity: 0.4; transform: scale(0.98); }
+        50% { opacity: 1; transform: scale(1.05); }
       }
-    }
-    </script>
+    </style>
+
+    <!-- Polyfill para Import Maps -->
+    <script async src="https://ga.jspm.io/npm:es-module-shims@1.10.1/dist/es-module-shims.js"></script>
+
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.460.0",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Loader de alto contraste para evitar tela branca -->
+      <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; width: 100vw; background-color: #0a0a0a; position: fixed; inset: 0; z-index: 9999;">
+        <img src="https://i.ibb.co/W40Yjwdc/Sem-t-tulo-1.png" alt="Neomove" style="height: 70px; width: auto; animation: pulse 1.5s ease-in-out infinite;">
+        <div style="margin-top: 20px; width: 100px; height: 2px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden;">
+          <div style="width: 100%; height: 100%; background: #2eb3ff; animation: loading-bar 1.5s infinite;"></div>
+        </div>
+      </div>
+    </div>
+    <style>
+      @keyframes loading-bar {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
+      }
+    </style>
+
+    <script type="module" src="./index.tsx"></script>
   </body>
 </html>
