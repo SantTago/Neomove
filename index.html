@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Neomove | Fisioterapia & Performance</title>
     
-    <!-- Cor da Interface do Sistema -->
+    <!-- Cor da Interface do Sistema e Metadados de Cor -->
     <meta name="theme-color" content="#0a0a0a">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="msapplication-TileColor" content="#0a0a0a">
@@ -21,6 +21,7 @@
     <meta property="og:site_name" content="Neomove" />
     <meta property="og:title" content="Neomove | Fisioterapia & Performance" />
     <meta property="og:description" content="Movimento sem dor. Performance com confiança. Especialistas em biomecânica e reabilitação esportiva de elite." />
+    <!-- Imagem de visualização do link -->
     <meta property="og:image" content="https://i.ibb.co/W40Yjwdc/Sem-t-tulo-1.png" />
     <meta property="og:image:secure_url" content="https://i.ibb.co/W40Yjwdc/Sem-t-tulo-1.png" />
     <meta property="og:image:type" content="image/png" />
@@ -48,8 +49,9 @@
         --primary-blue: #2eb3ff;
         --dark-bg: #0a0a0a;
       }
+      /* Fundo preto imediato para evitar qualquer clarão branco */
       html, body {
-        background-color: var(--dark-bg) !important;
+        background-color: #0a0a0a !important;
         color: #ffffff;
         margin: 0;
         padding: 0;
@@ -59,6 +61,7 @@
       }
       #root {
         min-height: 100vh;
+        background-color: #0a0a0a;
       }
       .neon-glow {
         box-shadow: 0 0 15px rgba(46, 179, 255, 0.4);
@@ -69,14 +72,6 @@
       .italic-speed {
         font-style: italic;
         letter-spacing: -0.02em;
-      }
-      @keyframes pulse {
-        0%, 100% { opacity: 0.4; transform: scale(0.98); }
-        50% { opacity: 1; transform: scale(1.05); }
-      }
-      @keyframes loading-bar {
-        0% { transform: translateX(-100%); }
-        100% { transform: translateX(100%); }
       }
     </style>
 
@@ -90,21 +85,15 @@
     "react-dom": "https://esm.sh/react-dom@19.0.0",
     "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
     "lucide-react": "https://esm.sh/lucide-react@0.460.0",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
   }
 }
 </script>
   </head>
   <body>
-    <div id="root">
-      <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; width: 100vw; background-color: #0a0a0a; position: fixed; inset: 0; z-index: 9999;">
-        <img src="https://i.ibb.co/W40Yjwdc/Sem-t-tulo-1.png" alt="Neomove" style="height: 70px; width: auto; animation: pulse 1.5s ease-in-out infinite;">
-        <div style="margin-top: 20px; width: 100px; height: 2px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden;">
-          <div style="width: 100%; height: 100%; background: #2eb3ff; animation: loading-bar 1.5s infinite;"></div>
-        </div>
-      </div>
-    </div>
+    <!-- Removido o loader manual para que o React assuma o controle instantaneamente -->
+    <div id="root"></div>
 
     <script type="module" src="./index.tsx"></script>
   </body>
