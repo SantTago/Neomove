@@ -48,7 +48,6 @@
         --primary-blue: #2eb3ff;
         --dark-bg: #0a0a0a;
       }
-      /* Fundo preto forçado desde o milissegundo zero */
       html, body {
         background-color: var(--dark-bg) !important;
         color: #ffffff;
@@ -71,27 +70,13 @@
         font-style: italic;
         letter-spacing: -0.02em;
       }
-      a, button {
-        min-height: 48px;
-        min-width: 48px;
-        cursor: pointer;
-      }
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: var(--dark-bg);
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #1a1a1a;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: var(--primary-blue);
-      }
       @keyframes pulse {
         0%, 100% { opacity: 0.4; transform: scale(0.98); }
         50% { opacity: 1; transform: scale(1.05); }
+      }
+      @keyframes loading-bar {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
       }
     </style>
 
@@ -102,16 +87,17 @@
 {
   "imports": {
     "react": "https://esm.sh/react@19.0.0",
-    "react-dom": "https://esm.sh/react-dom@19.0.0/client",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
     "lucide-react": "https://esm.sh/lucide-react@0.460.0",
-    "react/": "https://esm.sh/react@^19.2.4/"
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
   }
 }
 </script>
   </head>
   <body>
     <div id="root">
-      <!-- Loader de alto contraste para evitar tela branca -->
       <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; width: 100vw; background-color: #0a0a0a; position: fixed; inset: 0; z-index: 9999;">
         <img src="https://i.ibb.co/W40Yjwdc/Sem-t-tulo-1.png" alt="Neomove" style="height: 70px; width: auto; animation: pulse 1.5s ease-in-out infinite;">
         <div style="margin-top: 20px; width: 100px; height: 2px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden;">
@@ -119,12 +105,6 @@
         </div>
       </div>
     </div>
-    <style>
-      @keyframes loading-bar {
-        0% { transform: translateX(-100%); }
-        100% { transform: translateX(100%); }
-      }
-    </style>
 
     <script type="module" src="./index.tsx"></script>
   </body>
